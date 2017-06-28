@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client</title>
+    <link rel="stylesheet" href="css/lib/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts/icon-font/iconfont.css">
+    <link rel="stylesheet" href="css/lib/animate.css">
+    <link rel="stylesheet" href="css/page/client.css">
+</head>
+<body>
+
+<div class="main">
+    <div class="top-bar app-drag">
+        <div class="bar-left dropdown">
+            <div class="avatar app-no-drag dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <img src="img/avatar.png" alt="头像" class="img-responsive img-circle">
+            </div>
+            <ul class="dropdown-menu">
+                <li class="user-info">
+                    <a class="user-info-name" href="">9.8m/s²</a>
+                    <a class="user-info-statement" href="">编辑个性签名</a>
+                </li>
+                <li role="separator" class="divider"></li>
+                <li class="dive">
+                    <a href="">隐身</a>
+                </li>
+                <li class="log-out">
+                    <a href="">退出账号</a>
+                </li>
+            </ul>
+            <div class="search-box app-no-drag">
+                <label for="search">
+                    <i class="iconfont icon-search"></i>
+                    <input type="text" id="search" class="search-input">
+                </label>
+            </div>
+        </div>
+        <div class="bar-center">
+            <div class="message tab-btn app-no-drag" title="消息">
+                <i class="iconfont icon-message"></i>
+            </div>
+            <div class="friend tab-btn app-no-drag" title="联系人">
+                <i class="iconfont icon-friend"></i>
+            </div>
+        </div>
+        <div class="bar-right">
+            <div class="window-btns pull-right app-no-drag">
+                <div class="minimize-win window-bar-btn">
+                    <i class="iconfont icon-minimize"></i>
+                </div>
+                <div class="close-win window-bar-btn">
+                    <i class="iconfont icon-close"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="interface">
+        <div class="left-side">
+            <div class="item">
+                <div class="item-head">
+                    <img src="img/avatar.png" alt="头像" class="img-responsive img-circle">
+                </div>
+                <div class="item-body">
+                    <div class="item-title">
+                        {item-title}
+                    </div>
+                    <div class="item-tip">
+                        {item-tip}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="messages">
+            </div>
+            <div class="input-box">
+                <div class="input-box-toolbar dropup">
+                    <div class="input-box-toolbar-btn dropdown-toggle" id="emoj" title="表情" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <i class="iconfont icon-emoj"></i>
+                    </div>
+                    <div class="input-box-toolbar-btn connect" title="p2p连接">
+                        <i class="iconfont icon-connect"></i>
+                    </div>
+                    <div class="input-box-toolbar-btn disconnect" title="停止聊天">
+                        <i class="iconfont icon-cut"></i>
+                    </div>
+                    <div class="dropdown-menu emoj-menu">
+                        <div class="emojs">
+                            <div class="emoj">
+                                <img src="img/emoj/呕吐.svg" alt="">
+                            </div>
+                            <div class="emoj">
+                                <img src="img/emoj/笑哭.svg" alt="">
+                            </div>
+                            <div class="emoj">
+                                <img src="img/emoj/开心.svg" alt="">
+                            </div>
+                            <div class="emoj">
+                                <img src="img/emoj/无语.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="emojs">
+                            <div class="emoj">
+                                <img src="img/emoj/生气.svg" alt="">
+                            </div>
+                            <div class="emoj">
+                                <img src="img/emoj/迷茫.svg" alt="">
+                            </div>
+                            <div class="emoj">
+                                <img src="img/emoj/头晕.svg" alt="">
+                            </div>
+                            <div class="emoj">
+                                <img src="img/emoj/魔鬼.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="emojs">
+                            <div class="emoj">
+                                <img src="img/emoj/难过.svg" alt="">
+                            </div>
+                            <div class="emoj">
+                                <img src="img/emoj/大哭.svg" alt="">
+                            </div>
+                            <div class="emoj">
+                                <img src="img/emoj/僵尸.svg" alt="">
+                            </div>
+                            <div class="emoj">
+                                <img src="img/emoj/懵圈.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-msg">
+                    <label for="input-msg" class="hidden"></label>
+                    <textarea id="input-msg"></textarea>
+                </div>
+                <div class="input-toolbar-bottom clearfix">
+                    <button class="btn btn-sm pull-right send-msg" title="ctrl + Enter 发送" style="outline: none;" id="send-msg">发送(s)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/page/client.js"></script>
+</body>
+</html>

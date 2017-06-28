@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  "name": "Ursa Major",
+  "version": "1",
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "permissions": [
+    "storage",
+    "alarms",
+    "notifications",
+    "<all_urls>",
+    {
+      "fileSystem": [
+        "write"
+      ]
+    },
+    "syncFileSystem"
+  ],
+  "app": {
+    "background": {
+      "scripts": [
+        "main.js"
+      ]
+    }
+  },
+  "sockets": {
+    "tcp": {
+      "connect": "*:*"
+    },
+    "tcpServer" : {
+      "listen": ["*"]
+    }
+  }
+}
