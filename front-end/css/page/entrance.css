@@ -1,0 +1,133 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 330px;
+}
+
+.top {
+    -webkit-app-region: drag;
+    height: 60%;
+    background-color: cadetblue;
+    position: relative;
+}
+
+.bottom {
+    height: 40%;
+    background-color: #ebf2f9;
+}
+
+.bottom-content {
+    display: flex;
+    width: 80%;
+    padding-top: 10px;
+    margin:auto;
+}
+
+.bottom-content-left {
+    margin-right: 10px;
+}
+
+.bottom-content-right {
+
+}
+
+#name + .reg-link {
+    display: table-cell;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+#user-name + .login-link {
+    display: table-cell;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.window-bar {
+    text-align: right;
+}
+
+.window-bar-btn {
+    float: right;
+    display: flex;
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    margin: 10px 10px 10px 0;
+    -webkit-app-region: no-drag;
+    transition: .3s;
+}
+
+.window-bar-btn:hover {
+    cursor: pointer;
+    background-color: rgba(209, 211, 212, 0.14);
+    color: crimson;
+}
+
+.window-bar-btn > i {
+    margin: auto;
+}
+
+.logo {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    top: 50%;
+    font-size: 35px;
+    width: 250px;
+    height: 150px;
+    color: #fff;
+    transform: translate(-50%, -50%);
+}
+
+.avatar {
+    width: 70px;
+    height: 70px;
+}
+
+.avatar > img {
+    border: 1px solid transparent;
+}
+
+.btns {
+    margin-top: 10px;
+}
+
+.btns .btn {
+    width: 130px;
+}
+
+.login-animation {
+    animation: login-animation .5s forwards;
+}
+
+@keyframes login-animation {
+    from {
+        transform: translateX(0px);
+    }
+    to {
+        transform: translateX(140px);
+    }
+}
+
+.login-animation-border {
+    animation: login-animation-border .5s infinite alternate linear;
+}
+
+@keyframes login-animation-border {
+    from {
+        border-color: transparent;
+    }
+    to {
+        border-color: #d58512;
+    }
+}

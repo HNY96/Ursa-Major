@@ -1,0 +1,38 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app-drag {
+    -webkit-app-region: drag;
+}
+
+.app-no-drag {
+    -webkit-app-region: no-drag;
+}
+
+.main {
+    height: 100%;
+}
+
+.window-bar-btn {
+    display: flex;
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    margin: 10px 10px 10px 0;
+    -webkit-app-region: no-drag;
+    transition: .3s;
+}
+
+.window-bar-btn:hover {
+    cursor: pointer;
+    background-color: rgba(209, 211, 212, 0.14);
+    color: crimson;
+}
+
+.window-bar-btn > i {
+    margin: auto;
+}

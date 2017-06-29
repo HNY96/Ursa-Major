@@ -1,0 +1,369 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app-drag {
+    -webkit-app-region: drag;
+}
+
+.app-no-drag {
+    -webkit-app-region: no-drag;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: #009688;
+}
+
+.bar-left {
+    width: 250px;
+    display: flex;
+}
+
+.bar-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.bar-right {
+    width: 250px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.avatar > img {
+    border: 2px solid transparent;
+    transition: .3s;
+}
+
+.avatar > img:hover {
+    cursor: pointer;
+    border-color: #d58512;
+}
+
+.search-box {
+    width: 180px;
+    display: flex;
+    align-items: center;
+}
+
+.search-box > label {
+    position: relative;
+    margin: 0;
+}
+
+.search-box .search-input {
+    width: 100px;
+    border: 1px solid rgba(255, 255, 255, .2);
+    background-color: rgba(255, 255, 255, .075);
+    text-indent: 2em;
+    color: #fff;
+    transition: .3s;
+}
+
+.search-input:focus {
+    background-color: transparent;
+}
+
+.icon-search {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-42%);
+}
+
+.window-btns {
+    display: flex;
+}
+
+.window-bar-btn {
+    display: flex;
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    margin: 10px 10px 10px 0;
+    -webkit-app-region: no-drag;
+    transition: .3s;
+}
+
+.window-bar-btn:hover {
+    cursor: pointer;
+    background-color: rgba(209, 211, 212, 0.14);
+    color: crimson;
+}
+
+.window-bar-btn > i {
+    margin: auto;
+}
+
+.tab-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    transition: .3s;
+}
+
+.tab-btn:hover {
+    cursor: pointer;
+    /*background-color: rgba(255, 255, 255, .2);*/
+    color: #f0f8ff;
+}
+
+.tab-btn:first-child {
+    margin-right: 10px;
+}
+
+.tab-btn > i {
+    font-size: 28px;
+}
+
+.interface {
+    display: flex;
+    width: 100%;
+    height: 540px;
+}
+
+.left-side {
+    flex-grow: 0;
+    width: 200px;
+    border-right: 1px solid #e0e0e0;
+    background-color: #fafafa;
+    overflow-y: auto;
+}
+
+.right-side {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 66px;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color .3s;
+}
+
+.item:hover {
+    background-color: #ebebeb;
+}
+
+.item.selected {
+    background-color: #ebebeb;
+}
+
+.item-head {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex-grow: 0;
+}
+
+.item-body {
+    flex-grow: 1;
+}
+
+.item-title {
+    font-weight: bold;
+}
+
+.item-tip {
+    color: gray;
+    font-size: 14px;
+}
+
+.messages {
+    flex-grow: 1;
+    user-select: text;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.messages::-webkit-scrollbar { /* 滚动条 */
+    width: 8px;
+}
+
+.messages::-webkit-scrollbar-button { /* 滚动条两端的按钮 */
+    display: none;
+}
+
+.messages::-webkit-scrollbar-track { /* 外层轨道 */
+    background-color: #cfcfcf;
+}
+
+.messages::-webkit-scrollbar-thumb { /* 滚动块 */
+    background-color: #726E6B;
+    border-radius: 8px;
+}
+
+.msg {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    animation-duration: .8s;
+}
+
+.msg.right-msg {
+    flex-direction: row-reverse;
+}
+
+.msg-head {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    user-select: none;
+}
+
+.msg-body {
+    position: relative;
+    border-radius: 5px;
+    background-color: #4db6ac;
+    max-width: 400px;
+    padding: 10px;
+}
+
+.msg-body:after {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    content: '';
+}
+
+.right-msg .msg-body:after {
+    border-left-color: #4db6ac;
+    top: 10px;
+    right: -12px;
+}
+
+.left-msg .msg-body:after {
+    border-right-color: #4db6ac;
+    top: 10px;
+    left: -12px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 130px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.input-box-toolbar {
+    height: 40px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    display: flex;
+    align-items: center;
+}
+
+.input-msg {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.input-toolbar-bottom {
+    height: 40px;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.send-msg {
+    margin-right: 10px;
+    margin-top: 5px;
+    background-color: #80cbc4;
+}
+
+.input-box-toolbar-btn {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+
+.input-box-toolbar-btn:hover {
+    background-color: rgba(220, 220, 220, .5);
+}
+
+.input-msg textarea {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    border: none;
+}
+
+.input-msg textarea:focus {
+    outline: none;
+}
+
+.input-msg textarea::-webkit-scrollbar { /* 滚动条 */
+    display: none;
+}
+
+.emoj-menu {
+    padding: 10px;
+}
+
+.emojs {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.emoj {
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.emoj > img {
+    width: 28px;
+    height: 28px;
+    transform-origin: center;
+    transition: .3s;
+}
+
+.emoj > img:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.inline-img {
+    width: 24px;
+    height: 24px;
+    margin: 0 5px;
+    display: inline-block;
+}
