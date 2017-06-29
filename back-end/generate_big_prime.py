@@ -47,13 +47,13 @@ def find_next_prime(n):
         if i > 50000:
             break;
             return 0
-    print ("loop used=%d, %d"%(i, i*2+2))
+    # print ("loop used=%d, %d"%(i, i*2+2))
     return n
 
-import sys
-inn = sys.argv[1]
-if False == is_probable_prime(int(inn)):
-    print ("not prime")
-else:
-    print ("may be prime")
-print (find_next_prime(int(inn)))
+# import sys
+# inn = sys.argv[1]
+# if False == is_probable_prime(int(inn)):
+#     print ("not prime")
+# else:
+#     print ("may be prime")
+# print (find_next_prime(int(inn)))
