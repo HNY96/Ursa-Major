@@ -2,3 +2,4 @@
 *.xml
 .idea/Ursa-Major.iml
 front-end/\.idea/
+*.txt

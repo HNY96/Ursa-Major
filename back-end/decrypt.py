@@ -27,4 +27,4 @@ def decrypt(c):
 
 # test function
 if __name__ == '__main__':
-    decrypt([1234, 5678, 9876, 7654])
+    decrypt([1362, 138, 1292, 1292, 444])
