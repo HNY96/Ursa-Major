@@ -10,6 +10,21 @@ def quick_mod(a, b, c):
 
 
 def decrypt(c):
-    #todo 去数据库中找到服务器的公私钥 private_key[d], pub_key[n]
+    # read key after making that
+    file_object = open("d.txt", 'r')
+    private_key = file_object.read()
+    file_object = open('n.txt', 'r')
+    n = file_object.read()
+    file_object.close()
 
-    m = quick_mod(c, private_key[d], pub_key[n])
+    result = []
+    for i in range(len(c)):
+        result.append(quick_mod(c[i], int(private_key), int(n)))
+    for i in range(len(result)):
+        result[i] = chr(result[i])
+        # print(result[i])
+
+
+# test function
+if __name__ == '__main__':
+    decrypt([1234, 5678, 9876, 7654])
