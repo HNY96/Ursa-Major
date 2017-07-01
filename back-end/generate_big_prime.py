@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import random
 _mrpt_num_trials = 100 # 测试轮数
 
